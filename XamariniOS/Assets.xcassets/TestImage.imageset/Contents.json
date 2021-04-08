@@ -1,0 +1,27 @@
+{
+  "images": [
+    {
+      "appearances": [],
+      "scale": "1x",
+      "idiom": "universal",
+      "filename": "CA210329_131812.jpg"
+    },
+    {
+      "appearances": [],
+      "scale": "2x",
+      "idiom": "universal",
+      "filename": "CA210329_1318121.jpg"
+    },
+    {
+      "appearances": [],
+      "scale": "3x",
+      "idiom": "universal",
+      "filename": "CA210329_1318122.jpg"
+    }
+  ],
+  "properties": {},
+  "info": {
+    "version": 1,
+    "author": ""
+  }
+}
