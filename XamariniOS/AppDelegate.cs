@@ -36,25 +36,22 @@ namespace XamariniOS
             // make the window visible
             Window.MakeKeyAndVisible();
 
-            var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            var filename = Path.Combine(documents, "MyTestImage.jpg");
-            var img = UIImage.FromBundle("TestImage.jpg");//the MyImage file is placed in the asset folder
-            NSData image = img.AsJPEG();
-            NSError err = null;
-            image.Save(filename, false, out err);
+            //var documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            //var filename = Path.Combine(documents, "Write.txt");
+            //File.WriteAllText(filename, "Write this text into a file!");
 
             OutputAudioQueue audioQueue = new OutputAudioQueue(new AudioStreamBasicDescription()
-                {
-                    Format = AudioFormatType.MPEG4AAC_HE,
-                    BytesPerPacket = 0,
-                    BitsPerChannel = 0,
-                    Reserved = 0,
-                    FormatFlags = 0,
-                    BytesPerFrame = 0, //Set this field to 0 for compressed formats. 
-                    SampleRate = 16000,
-                    ChannelsPerFrame = 1,
-                    FramesPerPacket = 1024 //for AAC. 
-                });
+            {
+                Format = AudioFormatType.MPEG4AAC_HE,
+                BytesPerPacket = 0,
+                BitsPerChannel = 0,
+                Reserved = 0,
+                FormatFlags = 0,
+                BytesPerFrame = 0, //Set this field to 0 for compressed formats. 
+                SampleRate = 16000,
+                ChannelsPerFrame = 1,
+                FramesPerPacket = 1024 //for AAC. 
+            });
             const int BufferCountMax = 1000;
             const int AudioBufferSize = 1024 * 8;
             for (int i = 0; i < BufferCountMax; i++)
